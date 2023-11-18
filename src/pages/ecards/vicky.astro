@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../sass/ecard.scss';
+---
+
+<Layout title="Tarjeta electrónica de Vicky Hernández" desc="Tarjeta de presentación electrónica creada por BichoTech">
+    <div class="bt-ecard">
+        <div class="logo">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+        <div class="name">
+            <div class="first-name">
+                Vicky
+            </div>
+            <div class="last-name">
+                Hernández
+            </div>
+        </div>
+        <div class="line-decoration">
+            <img src="/assets/images/line.png" alt="">
+        </div>
+        <div class="welcome-text">
+            <p>Bienvenidos y gracias por conocer los diferentes medios para comunicarse conmigo.</p>
+            <p>¿Quieres un amigo tejido?</p>
+        </div>
+        <div class="in-touch">
+            <ul>
+                <li><a href="https://bit.ly/3Ncr3qv" target="_blank"><span>01</span> Facebook</a></li>
+                <li><a href="https://bit.ly/47Dipsz" target="_blank"><span>02</span> Instagram</a></li>
+                <li><a href="tel:8112522666"><span>03</span> Llamada</a></li>
+                <li><a href="https://wa.link/hqqmzl" target="_blank"><span>04</span> WhatsApp</a></li>
+                <li><a href="mailto:vicky@malenky.com.mx" target="_blank"><span>05</span> Email</a></li>
+            </ul>
+        </div>
+        <div class="signature">
+            <a href="https://bit.ly/bxtek" target="_blank">Powered by BichoTect</a>
+        </div>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .bt-ecard {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+
+        .logo {
+            width: 244px;
+            height: 220px;
+            position: relative;
+            padding-top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .name {
+            margin-top: 40px;
+            margin-left: 40px;
+            
+
+            .first-name {
+                font-family: var(--ff-hand);
+                font-weight: 700;
+                font-size: 70px;
+                color: var(--bt-titles);
+            }
+
+            .last-name {
+                font-family: var(--ff-hand);
+                font-weight: 400;
+                font-size: 40px;
+                color: var(--bt-titles);
+                margin-left: 80px;
+                margin-top: -20px;
+            }
+        }
+
+        .line-decoration {
+            position: absolute;
+            right: 0;
+        }
+
+        .welcome-text {
+            margin-left: calc(40% + 5px);
+            margin-right: 20px;
+            margin-top: 26px;
+            p {
+                font-style: italic;
+            }
+        }
+
+        .in-touch {
+            margin-left: calc(40% + 5px);
+            margin-top: 30px;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 6px;
+                    a {
+                        span {
+                            margin-right: 6px;
+
+                            &:after {
+                                content: '';
+                                display: inline-block;
+                                width: 50px;
+                                height: 5px;
+                                border-top: 1px solid var(--bt-links);
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .signature {
+            position: absolute;
+            top: 84%;
+            left: -50px;
+            transform: rotateZ(270deg);
+            display: block;
+            
+            a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+</style>

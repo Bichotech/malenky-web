@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../sass/ecard.scss';
+---
+
+<Layout title="Bienvenido a Malenky" desc="Somos un negocio artesanal pensado en crear productos hechos con todo el amor del mundo.">
+	<div class="coming-soon">
+		<div class="logo">
+			<img src="/assets/images/logo.png" alt="">
+		</div>
+		<div class="text">
+			<p>Estamos trabajando en nuestro catálogo en línea.<br />Gracias por tu paciencia.</p>
+		</div>
+	</div>
+
+	<div class="in-touch">
+		<ul>
+			<li><a href="https://bit.ly/3Ncr3qv" target="_blank"><span>01</span> Facebook</a></li>
+			<li><a href="https://bit.ly/47Dipsz" target="_blank"><span>02</span> Instagram</a></li>
+			<li><a href="https://wa.link/hqqmzl" target="_blank"><span>03</span> WhatsApp</a></li>
+			<li><a href="https://bit.ly/ecvik" target="_blank"><span>04</span> eCard</a></li>
+		</ul>
+	</div>
+
+	<div class="signature">
+		<a href="https://bit.ly/bxtek" target="_blank">Powered by BichoTect</a>
+	</div>
+</Layout>
+
+<style lang="scss">
+	.coming-soon {
+		position: relative;
+		margin: 0 auto;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 90%;
+		max-width: 800px;
+		text-align: center;
+
+		@media screen and (width < 500px){
+			margin: 0 20px;
+		}
+
+		.logo {
+			margin-bottom: 30px;
+		}
+
+		.text {
+			p {
+				color: (--bt-titles);
+				font-family: var(--ff-hand);
+				font-weight: 400;
+				font-size: 50px;
+
+				@media screen and (width < 500px){
+					font-size: 32px;
+				}
+			}
+		}
+	}
+
+	.in-touch {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+
+		ul {
+			list-style: none;
+
+			li {
+				margin-bottom: 6px;
+				a {
+					span {
+						margin-right: 6px;
+
+						&:after {
+							content: '';
+							display: inline-block;
+							width: 50px;
+							height: 5px;
+							border-top: 1px solid var(--bt-links);
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.signature {
+		position: absolute;
+		top: 84%;
+		left: -50px;
+		transform: rotateZ(270deg);
+		display: block;
+		
+		a {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+</style>
