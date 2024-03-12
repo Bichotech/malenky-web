@@ -1,0 +1,67 @@
+---
+interface PROPS {
+    products_resume: Array<string>;
+}
+const { products_resume } = Astro.props as PROPS;
+---
+<section id="products-resume">
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
+            <div class="col">
+                <slot name="TextHTML" />
+            </div>
+            {products_resume.map((value:any) => (
+                <div class="col">
+                    <div class="product-photo"><img src={ value[0] } alt={ value[1] } /></div>
+                    <div class="product-content">
+                        <h4>{ value[1] }</h4>
+                        <p>{ value[2] }</p>
+                        <div class="button-container">
+                            <a href={ value[3] } class="btn">{ !value[4] ? 'Ver más': value[4] }</a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    section {
+        padding: 90px 86px;
+
+        @media screen and (width <= 1200px){
+            padding: 60px 20px;
+        }
+
+        .product-photo {
+            display: flex;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+
+            img {
+                flex-shrink: 0;
+                min-width: 100%;
+                min-height: 100%
+            }
+        }
+
+        .product-content {
+            padding: 20px;
+
+            .button-container {
+                display: block;
+                text-align: right;
+                margin-top: 20px;
+
+                .btn {
+
+                }
+            }
+        }
+    }
+</style>

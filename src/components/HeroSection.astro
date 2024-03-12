@@ -1,0 +1,143 @@
+---
+interface PROPS {
+    preTitle: string;
+    Title: string;
+    imgHeader?: string;
+    city: string;
+}
+const { preTitle, Title, imgHeader = 'crochet.png', city } = Astro.props as PROPS;
+const backStyle = "background-image: url('/assets/images/" + imgHeader + "');";
+---
+<header style={ backStyle }>
+    <div class="hero-text">
+        <div class="row">
+            <div class="col-12">
+                <div class="pre-title">{ preTitle }</div>
+                <h1>{ Title }</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="malenky-city">{ city }</div>
+
+    <div class="hero-teal-blur"></div>
+    <div class="hero-green-blur"></div>
+    <div class="hero-orange-blur"></div>
+
+    <div class="arrow">
+        <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.29289 24.2071C8.68342 24.5976 9.31658 24.5976 9.70711 24.2071L16.0711 17.8431C16.4616 17.4526 16.4616 16.8195 16.0711 16.4289C15.6805 16.0384 15.0474 16.0384 14.6569 16.4289L9 22.0858L3.34315 16.4289C2.95262 16.0384 2.31946 16.0384 1.92893 16.4289C1.53841 16.8195 1.53841 17.4526 1.92893 17.8431L8.29289 24.2071ZM10 1C10 0.447715 9.55228 0 9 0C8.44772 0 8 0.447715 8 1H10ZM10 23.5V1H8V23.5H10Z" fill="#EEA7B6"/>
+        </svg>
+    </div>
+</header>
+
+<style lang="scss">
+    header {
+        height: 650px;
+        overflow: hidden;
+        position: relative;
+        background-position: 85% 40px;
+        background-size: 700px;
+        background-repeat: no-repeat;
+
+        @media screen and (width <= 1200px){
+            background-position: right 100%;
+            background-size: 400px;
+        }
+
+        .arrow {
+            position: absolute;
+            display: block;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: upAndDown infinite 1s;
+
+            @media screen and (width <= 1200px){
+                bottom: 10px;
+            }
+        }
+
+        .malenky-city {
+            position: absolute;
+            left: 10%;
+            bottom: 6%;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            @media screen and (width <= 1200px){
+                bottom: 2%;
+                left: 5%;
+            }
+        }
+
+        .hero-text {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media screen and (width <= 1200px){
+                top: 30%
+            }
+
+            .pre-title {
+                font-size: 10px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 24px;
+                    height: 6px;
+                    border-top: 1px solid var(--bt-gray);
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .hero-teal-blur {
+            display: block;
+            position: absolute;
+            right: -5%;
+            top: -10%;
+            width: 600px;
+            height: 500px;
+            background-color: var(--bt-teal);
+            opacity: 0.3;
+            filter: blur(255px);
+            mix-blend-mode: multiply;
+        }
+
+        .hero-green-blur {
+            display: block;
+            position: absolute;
+            left: -5%;
+            top: -10%;
+            width: 600px;
+            height: 500px;
+            background-color: var(--bt-green);
+            opacity: 0.3;
+            filter: blur(255px);
+            mix-blend-mode: multiply;
+        }
+
+        .hero-orange-blur {
+            display: block;
+            position: absolute;
+            left: calc(50% - 300px);
+            bottom: -20%;
+            width: 600px;
+            height: 500px;
+            background-color: var(--bt-orange);
+            opacity: 0.1;
+            filter: blur(255px);
+            mix-blend-mode: multiply;
+        }
+    }
+</style>

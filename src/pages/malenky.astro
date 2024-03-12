@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ProductsResume from '../components/ProductsResume.astro';
+import SectionContent from '../components/SectionContent.astro';
+---
+
+<Layout title="Nuestra historia" desc="Somos un negocio artesanal pensado en crear productos crochet hechos con todo el amor del mundo.">
+	<HeroSection preTitle="Todo nace por alguna razón" Title="Tenemos una historia que contarte" imgHeader="hourglass.png" city="Monterrey, N.L." />
+	<SectionContent preTitle="Nuestro nacimiento" Title="Malenky, un emprendimiento artesanal">
+		<Fragment slot="SectionHTML">
+			<p>Cras quis massa at enim pulvinar consequat. Duis in laoreet ex, sit amet elementum urna. Aliquam sit amet ultrices ante. Nunc dictum ipsum ut odio vestibulum, tempor pulvinar lorem imperdiet. Nunc scelerisque vel felis eu rhoncus. In eget dui ac quam convallis molestie. Nulla non tincidunt ipsum, sed sodales sapien. Mauris orci mauris, pulvinar ut tempus et, posuere eget nisi. Duis lobortis ligula quis massa congue, a porta nisi vestibulum. Pellentesque euismod egestas enim. Nunc eget euismod quam. Mauris sit amet nisi consectetur mauris porta pellentesque vitae hendrerit libero. Quisque rutrum et risus nec mattis. Proin sollicitudin ipsum scelerisque venenatis lacinia. Aenean a ante quis justo tempor auctor ut ut arcu.</p>
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent preTitle="&iquest;Quienes somos?" Title="El equipo" Reverse=true>
+		<Fragment slot="SectionHTML">
+			<p>Somos un equipo conformado por dos pedagogas, dos ingenieros y un diseñador y mercadólogo. Todo lo que hacemos lo hacemos bajo investigación y un compromiso muy fuerte hacia los peques de la casa. Tambien pensamos en ti, papi y mami, para que tengoan la confianza de que lo que hacemos en Malenky esta hecho no solo con el corazón, sino tambien con investigación de por medio. Puedes ver nuestros <a href="#">artículos</a> en donde tratamos temas propedeuticos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ProductsResume
+		products_resume={[
+			["/assets/images/temporal.jpg", "Las experiencias para un peque", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
+			["/assets/images/temporal.jpg", "No todo son juegos y juguetes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
+			["/assets/images/temporal.jpg", "Apoyo infantil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"]
+		]}
+	>
+		<Fragment slot="TextHTML">
+			<div class="pre-title">Conoce lo que pensamos</div>
+			<hr />
+			<h2>Malenky Blog</h2>
+			<p>Además de hacer cositas con amor, también somos pedagogas de profesión y tratamos de dar cariño con conocimiento. Esto da mucho más confianza a nuestros clientes desde hace algún tiempo.</p>
+			<div class="button-container">
+				<a href="#" class="btn">Ir al Blog</a>
+			</div>
+		</Fragment>
+	</ProductsResume>
+</Layout>
