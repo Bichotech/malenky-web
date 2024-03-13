@@ -12,9 +12,7 @@ const sideIMG = "/assets/images/" + sideImage;
 <section class="malenky-section">
     <div class="row">
         <div class:list={["col-12", "col-xl-6", "malenky-image-block", { 'order-xl-last': Reverse }, { 'order-xl-first': !Reverse }]}>
-            <div class="malenky-image-container">
-                <img src={ sideIMG } alt="" />
-            </div>
+            <div class="malenky-image-container" style={{ backgroundImage: `url(${sideIMG})` }}></div>
         </div>
         <div class:list={["col-12", "col-xl-6", { 'order-xl-first': Reverse }, { 'order-xl-last': !Reverse }]}>
             <div class="content-section-text">
@@ -36,6 +34,7 @@ const sideIMG = "/assets/images/" + sideImage;
         background-color: rgba(0, 0, 0, 0.5);
         justify-content: center;
         align-items: center;
+        background-size: cover;
 
         img {
             flex-shrink: 0;
