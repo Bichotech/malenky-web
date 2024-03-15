@@ -1,0 +1,103 @@
+<div class="contact-section">
+    <div class="close-link"><a href="#">Cerrar</a></div>
+
+    <div class="contact-content">
+        <h2>Contacto</h2>
+        <p>Nos encanta tener clientes, pero amamos mucho más tener amigos. No dudes en contactarnos, nos encantará saber de ti.</p>
+        <ul class="contact-items">
+            <li><a href="https://wa.link/4x21qz">Por WhatsApp</a></li>
+            <li><a href="mailto:vicky@malenky.com.mx">Por correo electrónico</a></li>
+        </ul>
+    </div>
+</div>
+
+<style lang="scss">
+    .contact-section {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(20px);
+        z-index: 20;
+        top: 0;
+        left: 0;
+        transition: all 0.4s ease-in-out;
+
+        .close-link {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            a {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            }
+        }
+
+        .contact-content {
+            position: absolute;
+            bottom: 90px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (width < 1200px){
+                bottom: 40px;
+            }
+
+            h2 {
+                font-size: 120px;
+                text-transform: uppercase;
+
+                @media screen and (width < 1200px){
+                    font-size: 60px;
+                }
+            }
+
+            p {
+                font-size: 40px;
+
+                @media screen and (width < 1200px){
+                    font-size: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                font-size: 30px;
+                list-style: none;
+                padding: 0;
+                margin-top: 60px;
+
+                @media screen and (width < 1200px){
+                    font-size: 16px;
+                }
+
+                li {
+                    a {
+                        font-size: 30px;
+
+                        @media screen and (width < 1200px){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+    const closeLink:any = document.querySelector('.close-link');
+    const contactSection:any= document.querySelector('.contact-section');
+
+    closeLink.addEventListener('click', () => {
+        contactSection.style.display = 'none';
+    });
+</script>
