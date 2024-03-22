@@ -22,10 +22,18 @@ const { Title, Text, BtnText="Ver detalles", BtnURL, ImgProd="/assets/images/pro
 <style lang="scss">
     .item-catalogo {
         display: block;
-        width: 24%;
+        width: 360px;
+
+        @media screen and (width > 500px) and (width < 900px){
+            width: 48%;
+        }
+
+        @media screen and (width < 500px){
+            width: 100%;
+        }
 
         .image-container {
-            height: 250px;
+            height: 260px;
             background-size: cover;
             background-position: center center;
         }

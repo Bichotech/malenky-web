@@ -7,7 +7,7 @@ const { products_resume } = Astro.props as PROPS;
 <section id="products-resume">
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
-            <div class="col">
+            <div class="col resume-text">
                 <slot name="TextHTML" />
             </div>
             {products_resume.map((value:any) => (
@@ -32,6 +32,10 @@ const { products_resume } = Astro.props as PROPS;
 
         @media screen and (width <= 1200px){
             padding: 60px 20px;
+        }
+
+        .resume-text {
+            padding: 40px 0;
         }
 
         .product-photo {
