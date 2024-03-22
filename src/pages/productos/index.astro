@@ -1,0 +1,40 @@
+---
+import SectionContent from "../../components/SectionContent.astro";
+import Layout from "../../layouts/Layout.astro";
+import HeroInnerSection from "../../components/HeroInnerSection.astro";
+
+---
+
+<Layout title="Malenky :: Nuestro catálogo de productos" desc="Nuestros productos, más que ser un producto, son experiencias">
+    <HeroInnerSection preTitle="Hacemos muchas cosas, y todas con amor" Title="Nuestro catálogo de productos" city="Monterrey, N.L." />
+    <SectionContent preTitle="Nuestro producto estandarte" Title="Amigurúmis" sideImage="/assets/images/productos/amigurumis/raton.webp">
+        <Fragment slot="SectionHTML">
+            <p>Son nuestro producto estandarte dentro de nuestro catálogo, nacímos creando estas hermosas crituras y es lo que seguímos haciendo. Nuestro logotipo es un conejo porque fué el primer amigurúmi que hicimos.</p>
+
+            <div class="button-container">
+                <a href="/productos/amigurumis/" class="btn">Ir al catálogo</a>
+            </div>
+        </Fragment>
+    </SectionContent>
+
+    <SectionContent preTitle="Productos para cada temporada del año" Title="Productos de temporada y pedidos especiales" Reverse=true sideImage="/assets/images/productos/temporada/cat-temporada.webp">
+        <Fragment slot="SectionHTML">
+            <p>En este catálogo podrás ver productos que se adecúan para las temporadas del año como navidad, día de san valentín, día de muertos, etc.</p>
+            <p>Porque en ocasiones tenemos pedidos especiales por amigos y compañías, en algunos casos, hemos decidido abrirlo a todos ustedes y puedas realizar pedidos para alguien muy especial con ciertas características.</p>
+
+            <div class="button-container">
+                <a href="/productos/productos-de-temporada/" class="btn">Ir al catálogo y a la galeria</a>
+            </div>
+        </Fragment>
+    </SectionContent>
+
+    <SectionContent preTitle="Porque nos encanta crear experiencias" Title="Gift boxes y kits" sideImage="/assets/images/productos/boxes/box.webp">
+        <Fragment slot="SectionHTML">
+            <p>Imagina esto, es cumpleaños de esa amistad que tanto quieres o de un familiar muy querido, imagina su cara al abrir una caja armada por Malenky con mucho amor. Esas son las experiencias que nos encanta crear para tus seres amados.</p>
+            <p>Los productos de Malenky no son solo para los peques del hogar, tambien lo hacemos para ti, tu familia y grandes amigos.</p>
+            <div class="button-container">
+                <a href="/productos/craftboxes/" class="btn">Ir al catálogo</a>
+            </div>
+        </Fragment>
+    </SectionContent>
+</Layout>

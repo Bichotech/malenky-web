@@ -1,0 +1,44 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import HeroInnerSection from '../../../components/HeroInnerSection.astro';
+import Catalogo from '../../../components/Catalogo.astro';
+import SectionContent from '../../../components/SectionContent.astro';
+---
+
+<Layout title='Malenky :: Nuestros productos - Gift Boxes y Kits para peques' desc='Los amigurúmis son nuestro producto estandarte, navega por nuestro catálogo y elige el tuyo.'>
+    <HeroInnerSection preTitle="Nuestro nuevo producto" Title="Gift boxes y kits para peques" city="Monterrey, N.L." />
+    <Catalogo
+        CatalogTitle="Nuestro catálogo de gift boxes"
+        ProductsArray={[
+            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/detalles/raton-con-mochilita/", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Hada con morralito", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["Llaveritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["Muelita de fieltro", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["Rabitt-O", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["Hipo-Cleta", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["R-Osita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["R-Inocencio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["R-Osita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["R-Inocencio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ]
+        ]}]
+    />
+
+    <Catalogo
+        CatalogTitle="Nuestro catálogo de kits para peques"
+        ProductsArray={[
+            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/detalles/raton-con-mochilita/", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Hada con morralito", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+            ["Llaveritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
+        ]}]
+    />
+    <SectionContent preTitle="Como trabajamos" Title="Nuestro proceso">
+        <Fragment slot="SectionHTML">
+            <p>Nuestro proceso no solo es la parte creativa, en nuestro proceso incluimos los tecnicismos como producción y envío.</p>
+            <p>Te recomendamos revisar nuestra sección de preguntas frecuentes para que puedas ver si te leímos la mente y tenemos respuesta a ello, sino es así, mándanos un “WhatsApp” para responderte alguna duda que tengas.</p>
+
+            <ul class="contact-items">
+                <li><a href="https://wa.link/4x21qz">Por WhatsApp</a></li>
+            </ul>
+        </Fragment>
+    </SectionContent>
+</Layout>

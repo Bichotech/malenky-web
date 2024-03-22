@@ -1,0 +1,41 @@
+---
+interface PROPS {
+    Title: string;
+    Text: string;
+    BtnText?: string;
+    BtnURL: string;
+    ImgProd?: string;
+}
+const { Title, Text, BtnText="Ver detalles", BtnURL, ImgProd="/assets/images/productos/amigurumis/amigus.webp" } = Astro.props as PROPS;
+---
+<div class="item-catalogo">
+    <div class="image-container" style={{ backgroundImage: `url(${ ImgProd })` }}>&nbsp;</div>
+    <div class="text-container">
+        <h4>{ Title }</h4>
+        <p>{ Text }</p>
+    </div>
+    <div class="button-container">
+        <a href={ BtnURL } class="btn">{ BtnText }</a>
+    </div>
+</div>
+
+<style lang="scss">
+    .item-catalogo {
+        display: block;
+        width: 24%;
+
+        .image-container {
+            height: 250px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .text-container {
+            padding: 20px;
+        }
+
+        .button-container {
+            padding: 0 20px;
+        }
+    }
+</style>

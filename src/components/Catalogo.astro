@@ -1,0 +1,42 @@
+---
+interface PROPS {
+    CatalogTitle: string;
+    ProductsArray: Array<string>;
+}
+import ItemCatalogo from './ItemCatalogo.astro';
+const { CatalogTitle, ProductsArray } = Astro.props as PROPS;
+---
+
+<section class="catalogo-container">
+    <h2>{ CatalogTitle }</h2>
+
+    <div class="products-container">
+        { ProductsArray.map((value:string) => (
+            <ItemCatalogo Title={ value[0] } Text={ value[1] } BtnText={ value[2] } BtnURL={ value[3] } ImgProd={ value[4] } />
+        )) }
+    </div>
+</section>
+
+<style lang="scss">
+    .catalogo-container {
+        padding: 90px 86px;
+
+        @media screen and (width <= 1200px){
+            padding: 60px 20px;
+        }
+
+        h2 {
+            margin-bottom: 60px;
+        }
+
+        .products-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            column-gap: 1%;
+            row-gap: 40px;
+            flex-wrap: wrap;
+            
+        }
+    }
+</style>

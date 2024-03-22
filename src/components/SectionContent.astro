@@ -6,13 +6,12 @@ interface PROPS {
     sideImage?: string;
 }
 
-const { preTitle, Title, Reverse=false, sideImage="temporal.jpg" } = Astro.props as PROPS;
-const sideIMG = "/assets/images/" + sideImage;
+const { preTitle, Title, Reverse=false, sideImage="/assets/images/temporal.jpg" } = Astro.props as PROPS;
 ---
 <section class="malenky-section">
     <div class="row">
         <div class:list={["col-12", "col-xl-6", "malenky-image-block", { 'order-xl-last': Reverse }, { 'order-xl-first': !Reverse }]}>
-            <div class="malenky-image-container" style={{ backgroundImage: `url(${sideIMG})` }}></div>
+            <div class="malenky-image-container" style={{ backgroundImage: `url(${sideImage})` }}></div>
         </div>
         <div class:list={["col-12", "col-xl-6", { 'order-xl-first': Reverse }, { 'order-xl-last': !Reverse }]}>
             <div class="content-section-text">
