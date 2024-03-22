@@ -35,6 +35,10 @@ const { CatalogTitle, ProductsArray } = Astro.props as PROPS;
             justify-content: center;
             column-gap: 20px;
             row-gap: 40px;
+
+            @media screen and (width < 500px){
+                flex-direction: column;
+            }
         }
     }
 </style>
