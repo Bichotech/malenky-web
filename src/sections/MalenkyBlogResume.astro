@@ -1,0 +1,22 @@
+---
+import ProductsResume from "../components/ProductsResume.astro"
+---
+
+<ProductsResume
+    products_resume={[
+        ["/assets/images/temporal.jpg", "Las experiencias para un peque", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
+        ["/assets/images/temporal.jpg", "No todo son juegos y juguetes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
+        ["/assets/images/temporal.jpg", "Apoyo infantil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"]
+    ]}
+>
+    <Fragment slot="TextHTML">
+        <div class="pre-title">Amor y conocimiento</div>
+        <hr />
+        <h2>Malenky Blog</h2>
+        <p>En Malenky, somos educadoras apasionadas que creamos productos con amor y conocimiento pedagógico. Nuestro objetivo es ofrecer una experiencia única que fomente el desarrollo integral de los niños y niñas.</p>
+        <p>Creemos que el amor y el conocimiento son dos ingredientes esenciales para una educación de calidad. Te invitamos a unirte a nuestra comunidad y descubrir artículos que pueden ser de tu interés.</p>
+        <div class="button-container">
+            <a href="#" class="btn">Ir al Blog</a>
+        </div>
+    </Fragment>
+</ProductsResume>

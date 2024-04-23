@@ -47,10 +47,12 @@ a {
         font-size: 0.68rem;
         font-weight: 700;
         text-transform: uppercase;
-        padding: 5px 20px;
+        padding: 5px 20px 3px;
         border: 4px solid var(--bt-gray);
         border-radius: 0;
         transition: all 0.3s ease-in-out;
+        color: var(--bt-gray);
+        border-radius: 3px;
 
         &:hover {
             color: white;
@@ -106,6 +108,7 @@ section {
 
         a {
             text-decoration: underline;
+            font-size: inherit;
 
             &:hover {
                 color: var(--bt-pink);
@@ -117,12 +120,16 @@ section {
         &.contact-items {
             list-style: none;
             padding: 0;
+            font-size: 10px;
 
             li {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 10px;
+
                 a {
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: 10px;
+                    @extend li;
+                    text-decoration: underline;
                 }
             }
         }
@@ -167,10 +174,19 @@ section {
     20% {
         opacity: 1;
     }
-    25% {
+    23% {
         opacity: 0;
     }
-    30% {
+    26% {
+        opacity: 1;
+    }
+    36% {
+        opacity: 1;
+    }
+    38% {
+        opacity: 0;
+    }
+    40% {
         opacity: 1;
     }
 }
@@ -184,5 +200,23 @@ section {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: rgb(3,197,213);
+    }
+    25% {
+        fill: rgb(3,197,213);
+    }
+    50% {
+        fill: rgb(255, 115, 196);
+    }
+    75% {
+        fill: rgb(255, 115, 196);
+    }
+    100% {
+        fill: rgb(3,197,213)
     }
 }

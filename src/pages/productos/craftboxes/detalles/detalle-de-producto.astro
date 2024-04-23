@@ -1,0 +1,93 @@
+---
+import LayoutBoxes from "../../../../layouts/LayoutBoxes.astro";
+import Contact from "../../../../sections/Contact.astro";
+---
+<LayoutBoxes title="Malenky :: Detalle del ratón con mochilita" desc="Algo">
+    <section class="detail-container">
+        <div class="row">
+            <div class="col-12 col-xl-4">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/images/productos/amigurumis/raton.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/images/productos/amigurumis/raton.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/images/productos/amigurumis/raton.webp" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="col-12 col-xl-8">
+                <div class="details-content">
+                    <h1>Ratón con mochilita</h1>
+                    <p>Nació a partir de la idea de pertenecer al <a href="#">kit "Mis primeros dientes"</a>, el cual tiene un ratón o un hada. Pero los personajes han creado tanto revuelo y que sus hijos ya no están en edad del ratón o hada de los dientes que nos han pedido que vendamos por separado como amigurúmis a estos pesonajes.</p>
+                    <p>Como agradecimiento a la preferencia de nuestros clientes es que decidimos venderlo de esta forma.</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <h2>Detalles:</h2>
+                            <ul>
+                                <li>Hecho totalmente en chrochet</li>
+                                <li>Medidas: 99 x 99 cm.</li>
+                                <li>Por ahora, unicamente en color gris con mochilita y bufanda en color verde</li>
+                                <li>Esta realizado con estambre con color sin químicos dañinos</li>
+                                <li>No se uso ningún objeto que pudiera hacer daño a tus peques</li>
+                                <li>El ratón se alimenta de amor y cariño</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <h1>$460.00 MXN</h1>
+                            <a href="#" class="btn">Realizar mi pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="packing-detail">
+        <div class="row">
+            <div class="col-12">
+                Detalles de envío y condiciones.
+            </div>
+        </div>
+    </section> -->
+    <Contact />
+</LayoutBoxes>
+
+<style lang="scss">
+    section {
+        padding: 90px 86px;
+
+        @media (width <= 1200px){
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        .details-content {
+            padding: 20px;
+        }
+    }
+</style>

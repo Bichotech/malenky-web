@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ProductsResume from '../components/ProductsResume.astro';
 import SectionContent from '../components/SectionContent.astro';
+import MalenkyBlogResume from '../sections/MalenkyBlogResume.astro';
+import Contact from '../sections/Contact.astro';
 ---
 
 <Layout title="Bienvenido a Malenky" desc="Somos un negocio artesanal pensado en crear productos hechos con todo el amor del mundo.">
@@ -31,31 +33,6 @@ import SectionContent from '../components/SectionContent.astro';
 		</Fragment>
 	</SectionContent>
 
-	<ProductsResume
-		products_resume={[
-			["/assets/images/temporal.jpg", "Las experiencias para un peque", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
-			["/assets/images/temporal.jpg", "No todo son juegos y juguetes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
-			["/assets/images/temporal.jpg", "Apoyo infantil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"]
-		]}
-	>
-		<Fragment slot="TextHTML">
-			<div class="pre-title">Conoce lo que pensamos</div>
-			<hr />
-			<h2>Malenky Blog</h2>
-			<p>Además de hacer cositas con amor, también somos pedagogas de profesión y tratamos de dar cariño con conocimiento. Esto da mucho más confianza a nuestros clientes desde hace algún tiempo.</p>
-			<div class="button-container">
-				<a href="#" class="btn">Ir al Blog</a>
-			</div>
-		</Fragment>
-	</ProductsResume>
-
-	<SectionContent preTitle="Queremos conocerte" Title="Contáctanos" sideImage="/assets/images/contact.webp" Reverse=true>
-		<Fragment slot="SectionHTML">
-			<p>Nos encanta tener clientes, pero amamos mucho más tener amigos. No dudes en contactarnos, nos encantará saber de ti.</p>
-			<ul class="contact-items">
-				<li><a href="https://wa.link/4x21qz">Por WhatsApp</a></li>
-				<li><a href="mailto:vicky@malenky.com.mx">Por correo electrónico</a></li>
-			</ul>
-		</Fragment>
-	</SectionContent>
+	<MalenkyBlogResume />
+	<Contact />
 </Layout>

@@ -1,16 +1,16 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import LayoutBoxes from '../../../layouts/LayoutBoxes.astro';
 import HeroInnerSection from '../../../components/HeroInnerSection.astro';
 import Catalogo from '../../../components/Catalogo.astro';
 import SectionContent from '../../../components/SectionContent.astro';
 ---
 
-<Layout title='Malenky :: Nuestros productos - Gift Boxes y Kits para peques' desc='Los amigurúmis son nuestro producto estandarte, navega por nuestro catálogo y elige el tuyo.'>
-    <HeroInnerSection preTitle="Nuestro nuevo producto" Title="Gift boxes y kits para peques" city="Monterrey, N.L." />
+<LayoutBoxes title='Malenky :: Nuestros productos - Gift Boxes y Kits para peques' desc='Los amigurúmis son nuestro producto estandarte, navega por nuestro catálogo y elige el tuyo.'>
+    <HeroInnerSection preTitle="Nuestro nuevo producto" Title="Gift boxes y kits para peques" city="Monterrey, N.L." imgHeader="conejo-armando-una-caja-de-regalo.webp" />
     <Catalogo
         CatalogTitle="Nuestro catálogo de gift boxes"
         ProductsArray={[
-            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/detalles/raton-con-mochilita/", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/craftboxes/detalles/detalle-de-producto/", "/assets/images/productos/amigurumis/raton.webp"],
             ["Hada con morralito", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
             ["Llaveritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
             ["Muelita de fieltro", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
@@ -26,7 +26,7 @@ import SectionContent from '../../../components/SectionContent.astro';
     <Catalogo
         CatalogTitle="Nuestro catálogo de kits para peques"
         ProductsArray={[
-            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/detalles/raton-con-mochilita/", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Ratón con mochilita", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "/productos/craftboxes/detalles/detalle-de-producto/", "/assets/images/productos/amigurumis/raton.webp"],
             ["Hada con morralito", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
             ["Llaveritos", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Ver detalle", "#", ],
         ]}]
@@ -41,4 +41,4 @@ import SectionContent from '../../../components/SectionContent.astro';
             </ul>
         </Fragment>
     </SectionContent>
-</Layout>
+</LayoutBoxes>

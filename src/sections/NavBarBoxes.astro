@@ -1,5 +1,5 @@
 ---
-import TopLogo from '../components/TopLogo.astro';
+import TopLogo from '../components/logos/TopLogoBoxes.astro';
 ---
 <nav class="d-none d-xl-block">
     <ul>
@@ -35,7 +35,7 @@ import TopLogo from '../components/TopLogo.astro';
 <div class="show-menu d-xl-none d-none">
     <ul>
         <li>
-            <div class="top-logo">
+            <div class="top-logo-mobile">
                 <TopLogo />
             </div>  
         </li>
@@ -58,6 +58,7 @@ import TopLogo from '../components/TopLogo.astro';
             align-items: center;
             justify-content: center;
             padding: 12px 0;
+            margin: 0;
 
             li {
                 a {
@@ -66,7 +67,7 @@ import TopLogo from '../components/TopLogo.astro';
                     font-weight: 600;
 
                     .top-logo {
-                        width: 60px;
+                        width: 40px;
 
                         svg {
                             g.ojito_der {
@@ -88,7 +89,7 @@ import TopLogo from '../components/TopLogo.astro';
             align-items: center;
 
             .top-logo-mobile {
-                width: 60px;
+                width: 40px;
             }
 
             .burger {
@@ -144,6 +145,10 @@ import TopLogo from '../components/TopLogo.astro';
         top: 0;
         left: 0;
 
+        .top-logo-mobile {
+            width: 100px;
+        }
+
         ul {
             position: absolute;
             left: 50%;
@@ -170,7 +175,7 @@ import TopLogo from '../components/TopLogo.astro';
 
         const mobileMenu = document.querySelector(".show-menu") as HTMLElement;
         const mobileBtn = document.querySelector(".burger") as HTMLElement;
-        
+
         mobileBtn.addEventListener('click', () => {
             mobileBtn.classList.toggle('menu-activated');
             if ( mobileBtn.classList.contains("menu-activated") ){

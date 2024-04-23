@@ -1,39 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ProductsResume from '../components/ProductsResume.astro';
 import SectionContent from '../components/SectionContent.astro';
+import MalenkyBlogResume from '../sections/MalenkyBlogResume.astro';
+import HeroInnerSection from '../components/HeroInnerSection.astro';
 ---
 
 <Layout title="Nuestra historia" desc="Somos un negocio artesanal pensado en crear productos crochet hechos con todo el amor del mundo.">
-	<HeroSection preTitle="Todo nace por alguna razón" Title="Tenemos una historia que contarte" imgHeader="hourglass.png" city="Monterrey, N.L." />
-	<SectionContent preTitle="Nuestro nacimiento" Title="Malenky, un emprendimiento artesanal" sideImage="/assets/images/quienes_somos_1.webp">
+	<HeroInnerSection preTitle="Nacimos con amor" Title="Tenemos una historia que contarte" city="Monterrey, N.L." imgHeader="conejo-leyendo-un-cuento.webp" />
+	<SectionContent preTitle="Historia de Malenky" Title="Un viaje a través del estambre y el amor" sideImage="/assets/images/quienes_somos_1.webp">
 		<Fragment slot="SectionHTML">
-			<p>Cras quis massa at enim pulvinar consequat. Duis in laoreet ex, sit amet elementum urna. Aliquam sit amet ultrices ante. Nunc dictum ipsum ut odio vestibulum, tempor pulvinar lorem imperdiet. Nunc scelerisque vel felis eu rhoncus. In eget dui ac quam convallis molestie. Nulla non tincidunt ipsum, sed sodales sapien. Mauris orci mauris, pulvinar ut tempus et, posuere eget nisi. Duis lobortis ligula quis massa congue, a porta nisi vestibulum. Pellentesque euismod egestas enim. Nunc eget euismod quam. Mauris sit amet nisi consectetur mauris porta pellentesque vitae hendrerit libero. Quisque rutrum et risus nec mattis. Proin sollicitudin ipsum scelerisque venenatis lacinia. Aenean a ante quis justo tempor auctor ut ut arcu.</p>
+			<p>Desde que era una niña, mis manos siempre buscaban algo que crear. La curiosidad me impulsaba a explorar el mundo de los materiales, desmontando y armando objetos para comprender su funcionamiento. Mi primer encuentro con el estambre y las agujas llegó de la mano de mi madre, quien me enseñó los puntos básicos del tejido. Recuerdo que mientras practicaba, me contaba historias sobre mi abuela Mica, una tejedora apasionada que partió al cielo cuando yo solo tenía un año. "Si tu abuela Mica viviera, estaría muy contenta de verte tejer", me decía con cariño. Y así, tejí una bufanda para mi mejor amiga, quien ahora es mi comadre (¡entre risas!).</p>
+			<p>La adolescencia, la universidad, los amigos... la vida me llevó por otros caminos, dejando de lado el tejido por un tiempo. Pero el destino tenía otros planes. Un día, mientras mi esposo se recuperaba de una lesión en la columna, nuestros amigos de "Zurcidores de Cuentos" nos invitaron a participar en un bazar de artesanías. "Haz unas bufandas y vente con nosotros al stand", me dijeron. Y así, volví a tomar las agujas y el estambre en mis manos.</p>
+			<p>El acceso a internet me abrió las puertas a un mundo de posibilidades. Vídeos y páginas web me guiaron en el arte del tejido, permitiéndome explorar nuevas técnicas y crear amigurumis: adorables muñecos tejidos a crochet. Con el apoyo de "Zurcidores de Cuentos", comenzamos a vender nuestros amigurumis en las Ferias del Libro del Tec de Monterrey. Cada proyecto era una nueva aventura, un aprendizaje continuo que nos permitía perfeccionar nuestras creaciones.</p>
+			<p>Han pasado muchos años desde aquel regreso al tejido. Y aunque no tuve la fortuna de conocer a mi abuela Mica en persona, la siento presente en cada puntada. Su amor y alegría me llenan de energía para seguir tejiendo, creando historias con mis manos y compartiendo mi pasión con el mundo.</p>
+			<p>Malenky no es solo una marca, es una historia tejida con amor y dedicación. Es la prueba de que nunca es tarde para perseguir nuestros sueños, de que la pasión nos impulsa a superar obstáculos y de que la creatividad no tiene límites.</p>
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent preTitle="&iquest;Quienes somos?" Title="El equipo" sideImage="/assets/images/team.webp" Reverse=true>
+    <SectionContent preTitle="Un equipo dedicado y profesional" Title="El equipo Malenky" sideImage="/assets/images/team.webp" Reverse=true>
 		<Fragment slot="SectionHTML">
-			<p>Somos un equipo conformado por dos pedagogas, dos ingenieros y un diseñador y mercadólogo. Todo lo que hacemos lo hacemos bajo investigación y un compromiso muy fuerte hacia los peques de la casa. Tambien pensamos en ti, papi y mami, para que tengoan la confianza de que lo que hacemos en Malenky esta hecho no solo con el corazón, sino tambien con investigación de por medio. Puedes ver nuestros <a href="#">artículos</a> en donde tratamos temas propedeuticos.</p>
+			<p>Somos un equipo conformado por <strong>dos pedagogas especialistas en educación</strong> con muchas ganas de crear. Nuestro compromiso fundamental es el desarrollo integral de los niños y niñas, basándonos en la investigación y en un profundo amor por la educación.</p>
+			<p>En Malenky, no solo nos enfocamos en los peques, sino también en ustedes, papás y mamás. Queremos que tengan la tranquilidad de saber que todo lo que hacemos está hecho con el corazón, pero también con la solidez de la investigación y el respaldo de profesionales expertos en las distintas áreas del desarrollo infantil.</p>
+			<p>Pueden visitar nuestro blog, donde encontrarán artículos informativos sobre temas propedéuticos, es decir, aquellos que preparan a los niños y niñas para el aprendizaje formal en la escuela. En estos artículos, abordamos diversas temáticas relacionadas con el desarrollo cognitivo, emocional, social y físico de los más pequeños, siempre desde una perspectiva basada en la evidencia científica y en las mejores prácticas educativas.</p>
+			<p>Los invitamos a ser parte de la comunidad Malenky y a acompañarnos en este viaje de aprendizaje y aventuras junto a sus hijos e hijas.</p>
+			<p><small>Contamos con el apoyo de dos ingenieros desarrolladores y un creativo experto en imagen.</small></p>
 		</Fragment>
 	</SectionContent>
 
-	<ProductsResume
-		products_resume={[
-			["/assets/images/temporal.jpg", "Las experiencias para un peque", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
-			["/assets/images/temporal.jpg", "No todo son juegos y juguetes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"],
-			["/assets/images/temporal.jpg", "Apoyo infantil", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "#"]
-		]}
-	>
-		<Fragment slot="TextHTML">
-			<div class="pre-title">Conoce lo que pensamos</div>
-			<hr />
-			<h2>Malenky Blog</h2>
-			<p>Además de hacer cositas con amor, también somos pedagogas de profesión y tratamos de dar cariño con conocimiento. Esto da mucho más confianza a nuestros clientes desde hace algún tiempo.</p>
-			<div class="button-container">
-				<a href="#" class="btn">Ir al Blog</a>
-			</div>
-		</Fragment>
-	</ProductsResume>
+	<MalenkyBlogResume />
 </Layout>
