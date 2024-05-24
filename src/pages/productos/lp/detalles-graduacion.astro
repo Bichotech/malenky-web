@@ -1,0 +1,34 @@
+---
+import Catalogo from "../../../components/Catalogo.astro";
+import HeroInnerSection from "../../../components/HeroInnerSection.astro";
+import SectionContent from "../../../components/SectionContent.astro";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Malenky :: Celebra su Éxito" desc="Nuestros productos, más que ser un producto, son experiencias">
+    <HeroInnerSection preTitle="Celebra su éxito" Title="Demuestra tu cariño y apoyo con un detalle original y creativo" city="Monterrey, N.L." imgHeader="conejo-jugando-con-bolas-de-estambre.webp" />
+
+    <SectionContent preTitle="XXXXXX" Title="Sorpréndelo con un regalo que le recordará este día tan especial." sideImage="/assets/images/temporal.jpg">
+        <Fragment slot="SectionHTML">
+            <p>No hay nada mejor para tus pequeños graduados que un detalle que les haga recordar este momento tan especial.</p>
+            <p>En Malenky, deseamos ayudarte a crear un recuerdo perdurable en el tiempo y que cuando sea mayor, este amigurumi le haga regresar el tiempo en su mente y le recuerde también que te enorgullece su éxito.</p>
+            <p>Te presentamos los productos que tenemos para hacer este recuerdo muy memorable.</p>
+        </Fragment>
+    </SectionContent>
+
+    <Catalogo
+        CatalogTitle="Nuestro catálogo de productos"
+        ProductsArray={[
+            ["Nacimiento o Belén navideño en crochet", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Información", "#", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Velas Malenky", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Información", "#", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Pedidos especiales", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Información", "#", "/assets/images/productos/amigurumis/raton.webp"],
+            ["Pedidos especiales", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.", "Información", "#", "/assets/images/productos/amigurumis/raton.webp"],
+        ]}
+    />
+    
+    <SectionContent preTitle="Nuestro Nacimiento" Title="Malenky, un emprendimiento artesanal." sideImage="/assets/images/temporal.jpg">
+      <Fragment slot="SectionHTML">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel hendrerit velit. Morbi augue nisi, eleifend volutpat pharetra et, mattis id lorem. Sed vehicula euismod metus, eget eleifend odio tincidunt.</p>
+      </Fragment>
+  </SectionContent>
+</Layout>
